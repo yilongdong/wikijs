@@ -2,7 +2,7 @@
 title: vcpkg安装使用
 description: 
 published: true
-date: 2023-02-12T09:40:35.274Z
+date: 2023-02-12T09:44:13.322Z
 tags: 包管理, vcpkg
 editor: markdown
 dateCreated: 2023-02-12T01:44:54.841Z
@@ -56,7 +56,7 @@ source ~/.zshrc
 ```
 
 - `name`, `version`是项目名和版本。
-- `dependencies`是依赖包，里面可以设置版本的一些限制
+- `dependencies`是依赖包，里面可以设置版本的一些限制。
 - `builtin-baseline`是使用的vcpkg的commit id，搜索包就是先把vcpkg切换到对应到commit，然后搜索包。
 - `overrides`里面可以设置某个包的具体版本要求。
 
