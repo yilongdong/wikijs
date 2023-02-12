@@ -2,7 +2,7 @@
 title: vcpkg安装使用
 description: 
 published: true
-date: 2023-02-12T09:44:13.322Z
+date: 2023-02-12T14:56:43.827Z
 tags: 包管理, vcpkg
 editor: markdown
 dateCreated: 2023-02-12T01:44:54.841Z
@@ -18,7 +18,10 @@ pwd
 echo 'export VCPKG_DIR="vcpkg_install_path"' >> ~/.zshrc
 source ~/.zshrc
 echo 'export VCPKG_CMAKE_PATH="$VCPKG_DIR/scripts/buildsystems/vcpkg.cmake"' >> ~/.zshrc
-echo 'export PATH=$VCPKG_DIR:$PATH' >> ~/.zshrc
+vcpkg integrate zsh
+vcpkg integrate bash
+vcpkg integrate x-fish
+# echo 'export PATH=$VCPKG_DIR:$PATH' >> ~/.zshrc
 source ~/.zshrc
 ```
 
