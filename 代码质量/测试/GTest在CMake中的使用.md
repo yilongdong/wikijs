@@ -2,7 +2,7 @@
 title: GTest在CMake中的使用
 description: 
 published: true
-date: 2023-02-13T01:38:43.184Z
+date: 2023-02-13T02:08:27.942Z
 tags: cmake, 测试, gtest
 editor: markdown
 dateCreated: 2023-02-13T01:38:43.184Z
@@ -76,4 +76,13 @@ add_executable(test test.cpp)
 target_link_libraries(test GTest::gtest GTest::gtest_main GTest::gmock
                         GTest::gmock_main)
 gtest_discover_tests(test)
+```
+
+### 运行测试
+`enable_testing()`会在build目录中的对应目录下创建ctest配置文件（例如enable_testing写在src-path/tests目录下的CMakeLists.txt中，对应ctest配置文件就在build-path/tests下）
+[ctest-complains-no-test-configuration-file-found](https://stackoverflow.com/questions/68942999/ctest-complains-no-test-configuration-file-found)
+```shell
+cd debug/debug/tests # ctest配置文件
+ctest
+cd -
 ```
