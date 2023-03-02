@@ -2,14 +2,25 @@
 title: vcpkg安装使用
 description: 
 published: true
-date: 2023-02-12T14:56:43.827Z
+date: 2023-03-02T08:12:28.306Z
 tags: 包管理, vcpkg
 editor: markdown
-dateCreated: 2023-02-12T01:44:54.841Z
+dateCreated: 2023-02-21T10:19:26.656Z
 ---
 
 # vcpkg安装使用
 https://vcpkg.io/en/getting-started.html
+
+```shell
+wget -O vcpkg.tar.gz https://github.com/microsoft/vcpkg/archive/master.tar.gz
+
+sudo mkdir /opt/vcpkg
+sudo tar xf vcpkg.tar.gz --strip-components=1 -C /opt/vcpkg
+sudo /opt/vcpkg/bootstrap-vcpkg.sh -disableMetrics
+sudo ln -s /opt/vcpkg/vcpkg /usr/local/bin/vcpkg
+rm -rf vcpkg.tar.gz
+```
+
 ```shell
 git clone https://github.com/Microsoft/vcpkg.git
 ./vcpkg/bootstrap-vcpkg.sh -disableMetrics
